@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BluePath Directory</title>
+
+  <!-- Load Inter font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (Optional) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+  <!-- Apply Inter globally -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="left">
+      <img src="{% static 'assets/pfp.svg' %}" alt="Profile" class="profile-pic">
+      <span class="username">airjordanx</span>
+    </div>
+    <div class="center">BluePath.</div>
+    <nav class="right">
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a class="active" href="#">Explore</a>
+      <a href="#">Directory</a>
+      <a href="#">Help & FAQs</a>
+      <span class="search-icon">🔍</span>
+    </nav>
+  </header>
+
+  <main class="directory">
+    <div class="back-link"><a href="#">Back to explore</a></div>
+    <h1>Directory</h1>
+    <p class="subtitle">Explore campus buildings and facilities</p>
+
+    <!-- Building 1: Phelan Hall -->
+    <div class="building-card">
+      <img src="{% static 'assets/phelan.svg' %}" alt="Phelan Hall">
+      <div class="building-info">
+        <div class="title-row">
+          <h2>Phelan Hall</h2>
+          <span class="icon-bookmark-filled">🔖</span>
+        </div>
+        <p class="floors">Floors: 1, 2, 3</p>
+        <p class="location">Located beside Santos Hall and Xavier Hall</p>
+        <div class="facility-box">
+          <p><strong>Key Facilities</strong></p>
+          <div class="facilities">
+            <a href="#">📚 Classrooms</a>
+            <a href="#">🖥️ Instructional Media Center</a>
+          </div>
+          <button class="more-btn">See More Rooms ▼</button>
+        </div>
+        <div class="links">
+          <a href="#">🗺️ See on map</a>
+          <a href="#">🔗 See services and amenities</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Building 2: Santos Hall -->
+    <div class="building-card">
+      <img src="{% static 'assets/santos.svg' %}" alt="Santos Hall">
+      <div class="building-info">
+        <div class="title-row">
+          <h2>Santos Hall</h2>
+          <span class="icon-bookmark-outline">🔖</span>
+        </div>
+        <p class="floors">Floors: 1, 2, 3</p>
+        <p class="location">Located beside Phelan Hall and Xavier Hall</p>
+        <div class="facility-box">
+          <p><strong>Key Facilities</strong></p>
+          <div class="facilities">
+            <a href="#">📚 Classrooms</a>
+            <a href="#">🧪 Laboratories</a>
+          </div>
+          <button class="more-btn">See More Rooms ▼</button>
+        </div>
+        <div class="links">
+          <a href="#">🗺️ See on map</a>
+          <a href="#">🔗 See services and amenities</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Building 3: Burns Hall -->
+    <div class="building-card">
+      <img src="{% static 'assets/burns.svg' %}" alt="Burns Hall">
+      <div class="building-info">
+        <div class="title-row">
+          <h2>Burns Hall</h2>
+          <span class="icon-bookmark-outline">🔖</span>
+        </div>
+        <p class="floors">Floors: 1, 2, 3, 4, 5</p>
+        <p class="location">Located at the left side of the University Church</p>
+        <div class="facility-box">
+          <p><strong>Key Facilities</strong></p>
+          <div class="facilities">
+            <a href="#">📚 Classrooms</a>
+            <a href="#">🏥 Infirmary</a>
+          </div>
+          <button class="more-btn">See More Rooms ▼</button>
+        </div>
+        <div class="links">
+          <a href="#">🗺️ See on map</a>
+          <a href="#">🔗 See services and amenities</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
