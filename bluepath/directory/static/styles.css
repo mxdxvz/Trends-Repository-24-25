@@ -1,0 +1,312 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0D0D0D, #001425);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    padding-bottom: 50px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;               /* Controls the height of the nav */
+    padding: 0 24px;            /* Horizontal padding only */
+    background-color: #020202;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.username {
+    font-size: 14px;
+    color: #ccc;
+    margin-left: 8px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+}
+
+.nav-right a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 13px;
+}
+
+.nav-right a.active {
+    font-weight: 600;
+    color: #fff;
+}
+
+.nav-right .search-icon {
+    margin-right: 10px;
+    margin-left: 40px;   /* match spacing with links */
+    cursor: pointer;
+}
+
+.directory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 60px;
+}
+
+.directory-text h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.directory-text p {
+    margin-top: 12px;
+    margin-bottom: -30px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.back-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.directory-container1,
+.directory-container2 {
+    background-color: rgba(63, 63, 63, 0.25);
+    margin: 32px 60px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.directory-container3 {
+    background-color: rgba(63, 63, 63, 0.25);
+    margin: 32px 60px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom:  50px;
+}
+
+.directory-container1 img,
+.directory-container2 img,
+.directory-container3 img {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    margin-right: 15px;
+    margin-left: 5px;
+    object-fit: cover;
+}
+
+.directory-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 120px;
+    flex: 1;
+}
+
+.directory-info h2 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.directory-info p {
+    margin: 4px 0;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.directory-info .subtext {
+    font-size: 13px;
+    color: #aaa;
+}
+.directory-title {
+    display: flex;
+    align-items: center;
+}
+
+.building-name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.save-icon {
+    margin-left: 30px;
+    font-size: 17px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.save-icon.saved {
+    color: #FFD700;
+}
+
+.save-icon.saved::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f02e";
+    font-weight: 900;
+}
+
+.directory-extra {
+    position: relative;
+    background-color: rgba(217, 217, 217, 0.25);
+    border-radius: 20px;
+    width: 650px;
+    height: 70px;              /* Start with a smaller height */
+    margin-left: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    color: #ccc;
+    font-size: 14px;
+    overflow: hidden;
+    transition: height 0.3s ease;  /* Smooth transition for height */
+}
+
+.directory-extra.open {
+    height: 250px;             /* New height when expanded */
+}
+
+.directory-extra h3 {
+    font-size: 16px;
+    font-weight: 450;
+    color: white;
+    margin: 10px;
+    margin-bottom: 8px;
+}
+
+.more-rooms-box {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 150px;
+    height: 30px;
+    background-color: #00427B; /* light blue */
+    border-radius: 10px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;         /* vertical centering */
+    justify-content: center;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 13px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.more-rooms-text {
+    margin-right: 4px;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.dropdown-arrow {
+    font-size: 16px;
+    margin-bottom: 6px;
+    margin-left: 10px;
+}
+
+.facility-row {
+    display: flex;
+    gap: 30px;
+}
+
+.facility-icon {
+    font-size: 14px;
+    margin-right: 3px;
+    margin-left: 8px;
+}
+
+.facility-link {
+    font-size: 13px;
+    font-weight: 350;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;       /* Thinner underline */
+    text-underline-offset: 3px; 
+    color: #9DD1FF;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-right: 8px; /* space before the arrow */
+}
+
+.facility-link:hover {
+    color: #7bb5e7;  /* Darken the color on hover */
+}
+
+.arrow {
+    font-size: 12px;
+    color: #9DD1FF;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+.directory-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.directory-footer-links {
+    position: absolute;
+    bottom: -3px;
+    right: 20px;
+    display: flex;
+    gap: 360px;
+}
+
+.info-link {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.info-link .text {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-left: 4px;
+}

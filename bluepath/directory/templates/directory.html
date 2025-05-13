@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BluePath</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="{% static 'assets/profile.png' %}" alt="Profile" class="avatar">
+            <span class="username">airjordanx</span>
+        </div>
+        <div class="nav-center">
+            <span class="logo">BluePath<span class="dot">.</span></span>
+        </div>
+        <div class="nav-right">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Explore</a>
+            <a href="#" class="active">Directory</a>
+            <a href="#">Help & FAQs</a>
+            <i class="fas fa-search fa-lg search-icon"></i>
+        </div>
+    </nav>
+    <div class="directory-header">
+        <div class="directory-text">
+            <h1>Directory</h1>
+            <p>Explore campus buildings and facilities</p>
+        </div>
+        <a href="#" class="back-link">Back to explore</a>
+    </div>
+
+    <div class="directory-container1">
+        <img src="/static/assets/phelan.png" alt="Phelan Hall">
+    
+        <div class="directory-content">
+            <div class="directory-info">
+                <div class="directory-top-row">
+                    <div class="directory-title">
+                        <h2 class="building-name">Phelan Hall</h2>
+                        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+                    </div>
+                </div>
+                <p>Floors: 1, 2, 3</p>
+                <p class="subtext">Located beside Phelan Hall and Xavier Hall</p>
+
+                <div class="directory-footer-links">
+                    <a href="#" class="info-link"><span class="emoji">️🗺️</span><span class="text">See on map</span></a>
+                    <a href="#" class="info-link"><span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+                </div>                
+                               
+                
+            </div>
+        
+            <div class="directory-extra">
+                <div class="more-rooms-box">
+                    <span class="more-rooms-text">See more rooms</span>
+                    <span class="dropdown-arrow">⌄</span>
+                </div>
+
+                <h3>Key Facilities</h3>
+                <div class="facility-row">
+                    <div class="facility-item">
+                        <span class="facility-icon">📚</span>
+                        <a href="#" class="facility-link">
+                            Classrooms
+                        </a>
+                        <span class="arrow">&gt;</span>
+                    </div>
+                    <div class="facility-item">
+                        <span class="facility-icon">💻</span>
+                        <a href="#" class="facility-link">
+                            Instructional Media Center
+                        </a>
+                        <span class="arrow">&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="directory-container2">
+        <img src="/static/assets/santos.png" alt="Santos Hall">
+        
+        <div class="directory-content">
+            <div class="directory-info">
+                <div class="directory-top-row">
+                    <div class="directory-title">
+                        <h2 class="building-name">Santos Hall</h2>
+                        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+                    </div>
+                </div>
+                <p>Floors: 1, 2, 3</p>
+                <p class="subtext">Located beside Phelan Hall and Xavier Hall</p>
+
+                <div class="directory-footer-links">
+                    <a href="#" class="info-link"><span class="emoji">️🗺️</span><span class="text">See on map</span></a>
+                    <a href="#" class="info-link"><span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+                </div> 
+
+            </div>
+        
+            <div class="directory-extra">
+                <div class="more-rooms-box">
+                    <span class="more-rooms-text">See more rooms</span>
+                    <span class="dropdown-arrow">⌄</span>
+                </div>
+                <h3>Key Facilities</h3>
+                <div class="facility-row">
+                    <div class="facility-item">
+                        <span class="facility-icon">📚</span>
+                        <a href="#" class="facility-link">
+                            Classrooms
+                        </a>
+                        <span class="arrow">&gt;</span>
+                    </div>
+                    <div class="facility-item">
+                        <span class="facility-icon">🔬</span>
+                        <a href="#" class="facility-link">
+                            Laboratories
+                        </a>
+                        <span class="arrow">&gt;</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>    
+
+    <div class="directory-container3">
+        <img src="/static/assets/burns.png" alt="Burns Hall">
+        
+        <div class="directory-content">
+            <div class="directory-info">
+                <div class="directory-top-row">
+                    <div class="directory-title">
+                        <h2 class="building-name">Burns Hall</h2>
+                        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+                    </div>
+                </div>
+                <p>Floors: 1, 2, 3</p>
+                <p class="subtext">Located at the left side of the University Church</p>
+
+                <div class="directory-footer-links">
+                    <a href="#" class="info-link"><span class="emoji">️🗺️</span><span class="text">See on map</span></a>
+                    <a href="#" class="info-link"><span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+                </div> 
+
+            </div>
+        
+            <div class="directory-extra" id="directory-extra-phelan">
+    <div class="more-rooms-box" onclick="toggleMoreRooms('phelan')">
+        <span class="more-rooms-text">See more rooms</span>
+        <span class="dropdown-arrow">⌄</span>
+    </div>
+
+    <h3>Key Facilities</h3>
+    <div class="facility-row">
+        <div class="facility-item">
+            <span class="facility-icon">📚</span>
+            <a href="#" class="facility-link">
+                Classrooms
+            </a>
+            <span class="arrow">&gt;</span>
+        </div>
+        <div class="facility-item">
+            <span class="facility-icon">💻</span>
+            <a href="#" class="facility-link">
+                Instructional Media Center
+            </a>
+            <span class="arrow">&gt;</span>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    </div>    
+     
+    <script>
+        function toggleSave(icon) {
+            icon.classList.toggle('far');   // toggle outlined
+            icon.classList.toggle('fas');   // toggle solid
+            icon.classList.toggle('saved'); // apply yellow color class
+        }
+        function toggleMoreRooms(building) {
+    const container = document.getElementById(`directory-extra-${building}`);
+    container.classList.toggle('open'); // Toggle the "open" class to expand/collapse
+
+    // Optionally, change the arrow direction on click
+    const arrow = container.querySelector('.dropdown-arrow');
+    arrow.textContent = container.classList.contains('open') ? '▲' : '⌄';
+}
+
+        </script> 
+        
+    
+</body>
+</html>    
